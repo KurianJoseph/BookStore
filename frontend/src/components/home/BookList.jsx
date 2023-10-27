@@ -1,12 +1,14 @@
-import BookSingleCard from "./BookCard";
-
+import BookCard from "./BookCard";
+import Layout from "./Layout";
 const BookList = ({ books }) => {
   return (
-    <div className={`flex flex-wrap gap-4 mx-32`}>
-      {books.map((item) => (
-        <BookSingleCard key={item._id} book={item} />
-      ))}
-    </div>
+    <Layout>
+      <div className={`flex flex-wrap gap-4`}>
+        {books.map((item) => (
+          <BookCard key={item._id} book={item} />
+        ))}
+      </div>
+    </Layout>
   );
 };
 
