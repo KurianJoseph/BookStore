@@ -8,7 +8,7 @@ import BookSingleCard from './BookSingleCard';
 
 const BooksCard = ({ books}) => {
   return (
-    <div className={`flex flex-wrap gap-2`}>
+    <div className={`flex flex-wrap gap-4 mx-32`}>
       {books.map((item) => (
         <BookSingleCard key={item._id} book={item} />
       ))}
