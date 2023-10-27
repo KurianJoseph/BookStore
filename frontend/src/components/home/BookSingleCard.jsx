@@ -1,41 +1,44 @@
-import { Link } from 'react-router-dom';
-import { PiBookOpenTextLight } from 'react-icons/pi';
-import { BiUserCircle, BiShow } from 'react-icons/bi';
-import { AiOutlineEdit } from 'react-icons/ai';
-import { BsInfoCircle } from 'react-icons/bs';
-import { MdOutlineDelete } from 'react-icons/md';
-import { useState } from 'react';
-import BookModal from './BookModal';
+// import { Link } from "react-router-dom";
+// import { PiBookOpenTextLight } from "react-icons/pi";
+// import { BiUserCircle, BiShow } from "react-icons/bi";
+// import { AiOutlineEdit } from "react-icons/ai";
+// import { BsInfoCircle } from "react-icons/bs";
+// import { MdOutlineDelete } from "react-icons/md";
+import { useState } from "react";
+// import BookModal from "./BookModal";
 
 const BookSingleCard = ({ book }) => {
   const [showModal, setShowModal] = useState(false);
 
   return (
     <div className=" rounded-3xl overflow-hidden w-80 h-auto bg-[#858584] text-white">
-    <div className="">
-      <img className="w-full h-full" src={book.imgurl} />
-    </div>
-      <div className='p-4'>
-      <h3 className='text-lg font-bold'>{book.title}</h3>
-      <div className='flex items-center gap-2 pt-2'>
-      <div className="w-6 h-6 justify-center items-center flex">
-              <img className="w-6 h-6 rounded-[100px]" src="https://via.placeholder.com/24x24" />
-            </div>
-            <h4>{book.author}</h4>
-      </div>  
-      <div className='flex justify-between pt-4'>
-        <div>
-          <h6>Price</h6>
-          <span>{book.price}</span>
+      <div className="w-full h-72">
+        <img className="w-full h-full" src={book.imgurl} />
+      </div>
+      <div className="p-4">
+        <h3 className="text-lg font-bold">{book.title}</h3>
+        <div className="flex items-center gap-2 pt-2">
+          <div className="w-6 h-6 justify-center items-center flex">
+            <img
+              className="w-6 h-6 rounded-[100px]"
+              src="https://via.placeholder.com/24x24"
+            />
+          </div>
+          <h4>{book.author}</h4>
         </div>
-        <div>
-          <h6>Highest Bid</h6>
-          <span>0.33 wETH</span>
+        <div className="flex justify-between pt-4">
+          <div>
+            <h6>Price</h6>
+            <span>{book.price}</span>
+          </div>
+          <div>
+            <h6>Highest Bid</h6>
+            <span>0.33 wETH</span>
+          </div>
         </div>
       </div>
-      </div>
-  
-    {/* <div className="self-stretch h-[173px] px-[30px] pt-5 pb-[25px] flex-col justify-start items-start gap-[25px] flex">
+
+      {/* <div className="self-stretch h-[173px] px-[30px] pt-5 pb-[25px] flex-col justify-start items-start gap-[25px] flex">
       <div className="self-stretch h-[60px] flex-col justify-start items-start gap-[5px] flex">
         <div className="self-stretch text-white text-[22px] font-semibold font-['Work Sans'] capitalize leading-[30.80px]">{book.title}</div>
         <div className="self-stretch justify-start items-start gap-3 inline-flex">
@@ -58,7 +61,7 @@ const BookSingleCard = ({ book }) => {
         </div>
       </div>
     </div> */}
-  </div>
+    </div>
   );
 };
 
