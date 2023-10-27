@@ -1,18 +1,18 @@
-// import { Link } from "react-router-dom";
-// import { PiBookOpenTextLight } from "react-icons/pi";
-// import { BiUserCircle, BiShow } from "react-icons/bi";
-// import { AiOutlineEdit } from "react-icons/ai";
-// import { BsInfoCircle } from "react-icons/bs";
-// import { MdOutlineDelete } from "react-icons/md";
+import { Link } from "react-router-dom";
+import { PiBookOpenTextLight } from "react-icons/pi";
+import { BiUserCircle, BiShow } from "react-icons/bi";
+import { AiOutlineEdit } from "react-icons/ai";
+import { BsInfoCircle } from "react-icons/bs";
+import { MdOutlineDelete } from "react-icons/md";
 import { useState } from "react";
-// import BookModal from "./BookModal";
+import BookModal from "./BookModal";
 
 const BookSingleCard = ({ book }) => {
   const [showModal, setShowModal] = useState(false);
 
   return (
     <div className=" rounded-3xl overflow-hidden w-80 h-auto bg-[#858584] text-white">
-      <div className="w-full h-72">
+      <div className="">
         <img className="w-full h-full" src={book.imgurl} />
       </div>
       <div className="p-4">
