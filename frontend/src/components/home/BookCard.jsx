@@ -1,6 +1,6 @@
 const BookCard = ({ book }) => {
   return (
-    <div className=" rounded-3xl overflow-hidden w-80 h-auto bg-[#2B2B2B] text-white hover:shadow hover:shadow-white/10 font-mono hover:-translate-y-1 transition ease-in">
+    <div className=" rounded-3xl overflow-hidden w-80 h-auto bg-[#2B2B2B] text-white hover:shadow hover:shadow-white/10 font-mono hover:-translate-y-2 transition ease-in">
       <div className="w-full h-72">
         <img className="w-full h-full object-cover" src={book.imgurl} />
       </div>
