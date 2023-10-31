@@ -7,7 +7,7 @@ import { AiOutlineEdit } from "react-icons/ai";
 import { BsInfoCircle } from "react-icons/bs";
 import { MdOutlineAddBox, MdOutlineDelete } from "react-icons/md";
 import BooksTable from "../components/home/BooksTable";
-import BooksCard from "../components/home/BooksCard.jsx";
+import BookList from "../components/home/BookList.jsx";
 
 const Home = () => {
   const [books, setBooks] = useState([]);
@@ -45,7 +45,7 @@ const Home = () => {
         </button>
       </div>
       <div className="flex justify-between items-center">
-        <h1 className="text-3xl my-8">Books List</h1>
+        {/* <h1 className="text-3xl my-8">Books List</h1> */}
         <Link to="/books/create">
           <MdOutlineAddBox className="text-sky-800 text-4xl" />
         </Link>
@@ -55,7 +55,7 @@ const Home = () => {
       ) : showType === "table" ? (
         <BooksTable books={books} />
       ) : (
-        <BooksCard books={books} />
+        <BookList books={books} />
       )}
     </div>
   );
